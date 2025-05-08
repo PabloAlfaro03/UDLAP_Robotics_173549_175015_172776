@@ -1,47 +1,41 @@
 # {Proyecto: Nombre del Proyecto Simulado}  
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)  
 ![Maintained](https://img.shields.io/badge/status-maintained-brightgreen?style=for-the-badge)  
-[![RoboDK](https://img.shields.io/badge/Uses-RoboDK-blue?style=for-the-badge&logo=robodk)](https://robodk.com/)  
-[![Webots](https://img.shields.io/badge/Uses-Webots-cc3333?style=for-the-badge&logo=cyberbotics&logoColor=white)](https://cyberbotics.com/)  
-![Gazebo](https://img.shields.io/badge/Gazebo-black?style=for-the-badge&logo=ros&logoColor=white)  
-![ROS](https://img.shields.io/badge/ROS-22314E?style=for-the-badge&logo=ros&logoColor=white)  
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)  
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)  
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white)  
 
 Breve descripción del proyecto
 
----
+This project presents the implementation of a planar 3-degree-of-freedom (3-DOF) robotic arm designed to perform automated drawing tasks on a flat surface. The system processes an input image to extract relevant waypoints, which are then used to generate joint trajectories through inverse kinematics. The drawing is simulated in a custom graphical interface developed in MATLAB.
 
 ## 📋 Requisitos Previos
 
-- Conocimientos necesarios (e.g., fundamentos de robótica, simulación, ROS, programación en Python/C++)
+The implementation of the project required the following technical and software components: 
 
-- Herramientas necesarias (e.g., PC con Linux o Windows, acceso a internet)
+MATLAB R2023a or higher, including the Image Processing Toolbox for contour extraction. 
 
-- Software requerido (e.g., ROS Noetic, Webots, Gazebo, RoboDK, MATLAB)
+Robotics Toolbox for MATLAB (Peter Corke), used for modeling and controlling the planar robotic arm. 
 
----
+PC with minimum specifications: Intel i5 processor, 8 GB RAM, and Windows 10 or equivalent operating system. 
+
+Graphics rendering capability to support animation and simulation of the robot’s motion. 
+
+Basic familiarity with inverse kinematics and robotic arm modeling, as well as prior knowledge of MATLAB scripting. 
 
 ## 📖 Introducción
 
-Explicación del propósito del proyecto, qué problema aborda, cómo la simulación permite experimentar sin necesidad de hardware, y posibles aplicaciones educativas o industriales.
-
----
+This project focuses on the simulation of a planar 3-degree-of-freedom (3-DOF) robotic arm designed to replicate the contours of an input image through automated drawing. The system employs image processing techniques to extract the external boundaries from a binary version of the input image. These contours are decomposed into sets of ordered coordinates, referred to as waypoints, which represent the trajectory that the robot must follow. To facilitate the execution of the drawing, waypoints are grouped based on their spatial continuity and proximity, allowing the robot to follow coherent paths with minimal unnecessary repositioning. Each group of waypoints corresponds to a distinct stroke or contour fragment, thus reducing the number of abrupt movements and enhancing the smoothness of the drawing. The inverse kinematics for each waypoint are computed using the Robotics Toolbox for MATLAB, enabling the real-time simulation of the robot’s motion. This project demonstrates the integration of image analysis, kinematic modeling, and trajectory planning within a simulated robotic environment, and lays the groundwork for future implementation on physical robotic platforms. 
 
 ## 🔧 Entorno de Simulación
 
-Descripción del entorno de simulación utilizado:
+The entire application was developed and executed within the MATLAB R2024a environment, using its App Designer for graphical interface construction. All simulations and robotic modeling tasks rely on the academic installation of: 
 
-- Simulador principal (Webots, Gazebo, RoboDK, etc.)
+MATLAB R2024a 
 
-- Sistema operativo recomendado
+Image Processing Toolbox 
 
-- Versión de ROS (si aplica)
+Robotics Toolbox for MATLAB (version 10.4) 
 
-- Requisitos mínimos de hardware del equipo (RAM, CPU, GPU)
-
----
+This simulation environment allows for seamless integration of image analysis, numerical computation, and robotic visualization, ensuring compatibility and ease of use for educational purposes. The system was tested exclusively on Windows 10, though MATLAB ensures cross-platform support on Linux and macOS under equivalent configurations. 
 
 ## 💾 Instalación de Software
 
