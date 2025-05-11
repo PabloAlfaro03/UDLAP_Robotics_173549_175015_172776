@@ -4,17 +4,19 @@
 
 Breve descripción del proyecto
 
-El siguiente proyecto presenta la implementación de un brazo robótico planar de 3 grados de libertad (3-DOF) diseñado para realizar tareas de dibujo automatizado sobre una superficie plana de 2 x 2 x 1. El sistema procesa una imagen de entrada en formato JPG, para extraer puntos de referencia (waypoints) de las imágenes, que luego se utilizan para generar trayectorias articulares mediante cinemática inversa. El dibujo se simula en una interfaz gráfica personalizada desarrollada en una App de MATLAB.
+El siguiente proyecto presenta la implementación de un brazo robótico planar de 3 grados de libertad (3-DOF) diseñado para realizar tareas de dibujo automatizado sobre una superficie plana de 2 x 2 x 1. El sistema procesa una imagen de entrada en formato `.jpg`, para extraer puntos de referencia (waypoints) de las imágenes, que luego se utilizan para generar trayectorias articulares mediante cinemática inversa. El dibujo se simula en una interfaz gráfica personalizada desarrollada en una App de MATLAB.
 
 ## 📋 Requisitos Previos
 
 La implementación del proyecto requirió los siguientes componentes técnicos y de software:
 
-MATLAB R2023a o superior.
+Conexión a internet
 
-El add On, Image Processing Toolbox para la extracción de contornos. 
+MATLAB `R2024a` o superior.
 
-El add On, Robotics Toolbox for MATLAB (Peter Corke), utilizada para modelar y controlar el brazo robótico planar.
+El `add On`, Image Processing Toolbox para la extracción de contornos. 
+
+El `add On`, Robotics Toolbox for MATLAB (Peter Corke), utilizada para modelar y controlar el brazo robótico planar.
 
 Una laptop o PC con las siguientes especificaciones: Procesador Intel i5, 8 GB de RAM, 512GB de almacenamiento y sistema operativo Windows 10, equivalente o superior 
 
@@ -26,16 +28,16 @@ Conocimientos básicos de cinemática inversa y modelado de brazos robóticos, a
 
 Este proyecto se centra en la simulación de un brazo robótico planar de 3 grados de libertad (3-DOF) diseñado para replicar los contornos de una imagen de entrada mediante dibujo automatizado. El sistema emplea técnicas de procesamiento de imágenes para extraer los bordes externos de una versión binaria de la imagen. Estos contornos se descomponen en conjuntos de coordenadas ordenadas llamadas waypoints, que representan la trayectoria que debe seguir el robot.
 Para facilitar la ejecución del dibujo, los waypoints se agrupan según su continuidad espacial y proximidad, lo que permite al robot seguir trayectorias coherentes con reposicionamientos mínimos. Cada grupo de waypoints corresponde a un trazo o fragmento de contorno distinto, reduciendo movimientos abruptos y mejorando la suavidad del dibujo.
-La cinemática inversa para cada punto se calcula usando el Robotics Toolbox para MATLAB, lo que permite una simulación en tiempo real del movimiento del robot. Este proyecto demuestra la integración del análisis de imágenes, modelado cinemático y planificación de trayectorias en un entorno robótico simulado, sentando las bases para una futura implementación en plataformas robóticas físicas.
+La cinemática inversa para cada punto se calcula usando el Robotics Toolbox para MATLAB, lo que permite una simulación en tiempo real del movimiento del robot. Este proyecto demuestra la integración del análisis de imágenes, modelado cinemático y planificación de trayectorias en un entorno robótico simulado, sentando las bases para una futura implementación en plataformas robóticas físicas. El proyecto fue generado con fines educativos, con el objetivo de permitir a los autores entender los conceptos de la cinemática directa e inversa, por lo que no hay una aplicación industrial real que pueda realizar el robot planar dinujante propuesto. Sin embargo, si se adapta el código a un robot industrial real, este puede servir para programar robots cortadores o de soldadura.
 
 
 ## 🔧 Entorno de Simulación
 
-La aplicación fue completamente desarrollada y ejecutada en el entorno MATLAB R2024a, utilizando el apartado de App Designer para la construcción de la interfaz gráfica. Todas las simulaciones y tareas de modelado robótico se basan en la instalación académica de:
-•	MATLAB R2024a
+La aplicación fue completamente desarrollada y ejecutada en el entorno MATLAB `R2024a`, utilizando el apartado de App Designer para la construcción de la interfaz gráfica. Todas las simulaciones y tareas de modelado robótico se basan en la instalación académica de:
+•	MATLAB `R2024a`
 •	Image Processing Toolbox
 •	Robotics Toolbox para MATLAB (versión 10.4)
-Este entorno de simulación permite una integración fluida del análisis de imágenes, cálculos numéricos y simulación robótica, asegurando compatibilidad y facilidad de uso con fines educativos. El sistema fue probado exclusivamente en Windows 10, aunque MATLAB garantiza compatibilidad multiplataforma en Linux y macOS con configuraciones equivalentes.
+Este entorno de simulación permite una integración fluida del análisis de imágenes, cálculos numéricos y simulación robótica, asegurando compatibilidad y facilidad de uso con fines educativos. El sistema fue probado exclusivamente en Windows 10, aunque MATLAB garantiza compatibilidad multiplataforma en Linux y macOS con configuraciones equivalentes. Además, se recomienda que la computadora que ejecute la aplicaión cuente con un procesador Intel i5 de 12va generación, 8GB de RAM, 512 GB de alamcenamiento y una tarjeta gráfica dedicada.
 
 ## 💾 Instalación de Software
 
@@ -52,42 +54,52 @@ Para la instalación de el software de MATLAB se deben hacer una serie de pasos:
 
 6.	Al concretarse la creación y activación de la cuenta, la pagina trasladara al usuario a Matlab Online donde se debe dar clic a la opción de instalar Matlab en la computadora.
 
-7.	Dando click en instalar se abrirá una nueva ventana donde se debe escoger la versión de Matlab que se va a descargar (R2024a o superior).
+7.	Dando click en instalar se abrirá una nueva ventana donde se debe escoger la versión de Matlab que se va a descargar (`R2024a` o superior).
 
 8.	Una vez descargada la versión seleccionada, ir a la carpeta de descargas en la aplicación de archivos, dar clic derecho y ejecutar.
 
 9.	 Después de descargar, se abrirá una ventana emergente donde se debe colocar nuevamente el correo y la contraseña de la cuenta previamente creada, iniciar sesión y aceptar el contrato de uso.
 
-10.	Al iniciarse sesión por primera vez, se debe seleccionar una carpeta destino para los archivos de Matlab y posteriormente escoger el número de productos que ofrece Matlab, en este apartado escoger los productos necesarios para que la aplicación funcione. En este caso seleccionar Image Processing Toolbox y Robotics Toolbox para MATLAB (versión 10.4) junto con App Matlab.
+10.	Al iniciarse sesión por primera vez, se debe seleccionar una carpeta destino para los archivos de Matlab y posteriormente escoger el número de productos que ofrece Matlab, en este apartado escoger los productos necesarios para que la aplicación funcione. En este caso seleccionar Image Processing Toolbox y Robotics Toolbox para MATLAB `(versión 10.4)` junto con App Matlab.
 
 11.	Dar clic en el botón siguiente e instalar.
 
 12.	Finalmente, una vez realizada la instalación iniciar sesión por última vez con el correo y contraseña seleccionadas al inicio e utilizar Matlab.
 
-Nota: En caso de no haber instalado los productos necesarios para utilizar la Aplicación ir al apartado de Home en la aplicación y seleccionar Add-Ons, y buscar las los productos necesarios para observar el funcionamiento de la aplicación.
+Nota: En caso de no haber instalado los productos necesarios para utilizar la Aplicación ir al apartado de Home en la aplicación y seleccionar `Add-Ons`, y buscar las los productos necesarios para observar el funcionamiento de la aplicación.
 
 
 ## 🛠️ Configuración del Proyecto
 
-Para ejecutar correctamente la aplicación, el usuario debe contar con una instalación funcional de MATLAB R2024a (o una versión compatible), junto con las herramientas necesarias. A continuación, se describen los pasos que debe seguir un usuario nuevo para poner en marcha la aplicación: 
+Para ejecutar correctamente la aplicación, el usuario debe contar con una instalación funcional de MATLAB `R2024a` (o una versión compatible), junto con las herramientas necesarias. A continuación, se describen los pasos que debe seguir un usuario nuevo para poner en marcha la aplicación: 
+
+Paso 1:
 
 Instalar las herramientas necesarias Verifique que MATLAB tenga instalados y activados los siguientes complementos: 
 
 Image Processing Toolbox 
 
-Robotics Toolbox for MATLAB de Peter Corke (versión 10.4) 
+Robotics Toolbox for MATLAB de Peter Corke `(versión 10.4)` 
 
-Descargar los archivos del proyecto que se encuentran en la carpeta src.Asegúrese de obtener todos los archivos del proyecto, incluyendo el archivo principal .mlapp y cualquier función auxiliar o imagen necesaria. Se recomienda colocarlos en una sola carpeta para facilitar su organización. 
+Paso 2:
 
-Abrir la aplicación e Inicie MATLAB. Después, navegue a la carpeta del proyecto desde el panel de "Current Folder" y abra el archivo .mlapp haciendo doble clic. Alternativamente, también puede ejecutar la aplicación desde la ventana de comandos. 
+Descargar los archivos del proyecto que se encuentran en la carpeta src.Asegúrese de obtener todos los archivos del proyecto, incluyendo el archivo principal `.mlapp` y cualquier función auxiliar o imagen necesaria. Se recomienda colocarlos en una sola carpeta para facilitar su organización. 
+
+Paso 3:
+
+Abrir la aplicación e Inicie MATLAB. Después, navegue a la carpeta del proyecto desde el panel de "Current Folder" y abra el archivo `.mlapp` haciendo doble clic. Alternativamente, también puede ejecutar la aplicación desde la ventana de comandos. 
 
 ![interfaz](https://github.com/PabloAlfaro03/UDLAP_Robotics_173549_175015_172776/blob/master/templates/proyecto/proyecto-nombre_proyecto(sim)/media/images/Interfaz2.png)
 
-<p align="center">interfaz de la aplicación</p>
+Interfaz de la aplicación
+
+Paso 4:
 
 Conceder acceso a la cámara (si se desea utilizar la captura en tiempo real) En caso de utilizar la opción de cámara en vivo, asegúrese de que MATLAB tenga permisos para acceder al dispositivo de video. Es recomendable realizar pruebas previas con la función webcam para validar su funcionamiento. 
 
-Verificar compatibilidad de imágenes Actualmente, MATLAB solo admite imágenes en formato .jpg. Se recomienda convertir otros formatos antes de cargarlos. 
+Paso 5:
+
+Verificar compatibilidad de imágenes Actualmente, MATLAB solo admite imágenes en formato `.jpg`. Se recomienda convertir otros formatos antes de cargarlos. 
 
 Una vez realizada esta configuración, el usuario podrá utilizar la aplicación de manera completa y sin complicaciones. 
 
@@ -98,9 +110,9 @@ La interfaz de usuario está diseñada para ser clara e intuitiva, con un panel 
 
 1. Adquisición de imagen
 
-El usuario puede cargar una imagen desde su equipo (siempre que sea en formato JPG) o capturar una nueva con la cámara integrada. Este proceso se gestiona mediante cuatro botones:
+El usuario puede cargar una imagen desde su equipo (siempre que sea en formato `.jpg`) o capturar una nueva con la cámara integrada. Este proceso se gestiona mediante cuatro botones:
 
-•	Cargar Imagen: Abre el explorador de archivos para seleccionar una imagen en formato .jpg.
+•	Cargar Imagen: Abre el explorador de archivos para seleccionar una imagen en formato `.jpg`.
 
 •	Encender Cámara: Activa la webcam y muestra el video en tiempo real.
 
@@ -145,7 +157,7 @@ Se ejecuta automáticamente al lanzar la app, configurando los componentes gráf
 
 2.	Carga de la imagen
 
-Se activa un diálogo para seleccionar un archivo .jpg o usar la cámara para capturar una imagen. Esta se guarda en memoria para su procesamiento.
+Se activa un diálogo para seleccionar un archivo `.jpg` o usar la cámara para capturar una imagen. Esta se guarda en memoria para su procesamiento.
 
 3.	Procesamiento y extracción de waypoints
 
@@ -165,7 +177,7 @@ Se libera la cámara y se cierran ventanas cuando no se usan para evitar errores
  
 ## ✅ Conclusión
 
-La implementación del Planar Drawing Robot demuestra con éxito la integración del procesamiento de imágenes y el control de movimiento robótico en una única plataforma interactiva. Al convertir una imagen en una secuencia de movimientos mediante cinemática inversa, se logra una simulación funcional de dibujo automatizado. Sin embargo, a lo largo de la creación de la aplicación se observaron algunos detalles como la limitación de resolución de pantalla, ya que para monitores de 1920 x 1080 el diseño implementado se ve afectado y se observan palabras o colores encimados. De igual manera, el software de MATLAB genera algunas limitaciones en cuanto los formatos de imagen que se pueden procesar, ya que únicamente las imágenes JPG pueden ser procesadas, de igual manera la gama de colores que se puede procesar es RGB por lo que colores chillantes o neón no se pueden procesar. Aun que el nivel de detalle que se observa en las imágenes y la fluides de los movimientos del robot demuestran que la aplicación funciona de manera óptima para los objetivos fijados.
+La implementación del Planar Drawing Robot demuestra con éxito la integración del procesamiento de imágenes y el control de movimiento robótico en una única plataforma interactiva. Al convertir una imagen en una secuencia de movimientos mediante cinemática inversa, se logra una simulación funcional de dibujo automatizado. Sin embargo, a lo largo de la creación de la aplicación se observaron algunos detalles como la limitación de resolución de pantalla, ya que para monitores de 1920 x 1080 el diseño implementado se ve afectado y se observan palabras o colores encimados. De igual manera, el software de MATLAB genera algunas limitaciones en cuanto los formatos de imagen que se pueden procesar, ya que únicamente las imágenes `.jpg` pueden ser procesadas, de igual manera la gama de colores que se puede procesar es RGB por lo que colores chillantes o neón no se pueden procesar. Aun que el nivel de detalle que se observa en las imágenes y la fluides de los movimientos del robot demuestran que la aplicación funciona de manera óptima para los objetivos fijados.
 
 ## 🔜 Mejoras futuras
 
@@ -203,10 +215,13 @@ Video de instalación de Matlab: https://youtu.be/MCYakohl2Ms?si=WdyNmHtPaR5P9ED
 Equipo 6 de Robótica Indutrial: Robot planar dibujante
 
 Juan Pablo Alfaro Gaona id:173549
+- 📧 Correo electrónico: juan.alfaroga@udlap.mx
 
 Santiago Suárez Martínez id:175015
+- 📧 Correo electrónico: santiago.suarezmz@udlap.mx
 
 Alan Baladier Nicolás Beltrán Durán id:172776
+- 📧 Correo electrónico: alan.beltrandn@udlap.mx
 
 ## 📬 Contacto
 
