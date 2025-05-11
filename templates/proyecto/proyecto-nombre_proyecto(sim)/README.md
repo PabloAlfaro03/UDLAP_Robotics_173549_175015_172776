@@ -1,4 +1,4 @@
-# {Proyecto: Plannar Drawing Robot}  
+# {Proyecto: Robot Planar Dibujante}  
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)![Not Maintained](https://img.shields.io/badge/status-not_maintained-lightgrey?style=for-the-badge) 
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white)  
 
@@ -197,8 +197,10 @@ Video del funcionamiento de la aplicación subiendo imagenes desde la computador
 
 Video del funcionamiento utilizando una cámara web: https://youtu.be/_cR2oOMbyiU
 
+Video de instalación de Matlab: https://youtu.be/MCYakohl2Ms?si=WdyNmHtPaR5P9EDG
+
 ## 👥 Autores del proyecto
-Equipo 6 de Robótica Indutrial:
+Equipo 6 de Robótica Indutrial: Robot planar dibujante
 
 Juan Pablo Alfaro Gaona id:173549
 
