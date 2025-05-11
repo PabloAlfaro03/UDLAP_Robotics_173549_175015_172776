@@ -1,6 +1,5 @@
 # {Proyecto: Plannar Drawing Robot}  
-![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)  
-![Maintained](https://img.shields.io/badge/status-maintained-brightgreen?style=for-the-badge)  
+![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)![Not Maintained](https://img.shields.io/badge/status-not_maintained-lightgrey?style=for-the-badge) 
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white)  
 
 Breve descripción del proyecto
@@ -78,9 +77,11 @@ Image Processing Toolbox
 
 Robotics Toolbox for MATLAB de Peter Corke (versión 10.4) 
 
-Descargar los archivos del proyecto Asegúrese de obtener todos los archivos del proyecto, incluyendo el archivo principal .mlapp y cualquier función auxiliar o imagen necesaria. Se recomienda colocarlos en una sola carpeta para facilitar su organización. 
+Descargar los archivos del proyecto que se encuentran en la carpeta src.Asegúrese de obtener todos los archivos del proyecto, incluyendo el archivo principal .mlapp y cualquier función auxiliar o imagen necesaria. Se recomienda colocarlos en una sola carpeta para facilitar su organización. 
 
 Abrir la aplicación Inicie MATLAB, navegue a la carpeta del proyecto desde el panel de "Current Folder" y abra el archivo .mlapp haciendo doble clic. Alternativamente, también puede ejecutar la aplicación desde la ventana de comandos. 
+
+![interfaz](https://github.com/PabloAlfaro03/UDLAP_Robotics_173549_175015_172776/blob/master/templates/proyecto/proyecto-nombre_proyecto(sim)/media/images/Interfaz.png)
 
 Conceder acceso a la cámara (si se desea utilizar la captura en tiempo real) En caso de utilizar la opción de cámara en vivo, asegúrese de que MATLAB tenga permisos para acceder al dispositivo de video. Es recomendable realizar pruebas previas con la función webcam para validar su funcionamiento. 
 
