@@ -5,49 +5,68 @@
 
 Breve descripción del proyecto
 
-This project presents the implementation of a planar 3-degree-of-freedom (3-DOF) robotic arm designed to perform automated drawing tasks on a flat surface. The system processes an input image to extract relevant waypoints, which are then used to generate joint trajectories through inverse kinematics. The drawing is simulated in a custom graphical interface developed in MATLAB.
+El siguiente proyecto presenta la implementación de un brazo robótico planar de 3 grados de libertad (3-DOF) diseñado para realizar tareas de dibujo automatizado sobre una superficie plana de 2 x 2 x 1. El sistema procesa una imagen de entrada en formato JPG, para extraer puntos de referencia (waypoints) de las imágenes, que luego se utilizan para generar trayectorias articulares mediante cinemática inversa. El dibujo se simula en una interfaz gráfica personalizada desarrollada en una App de MATLAB.
 
 ## 📋 Requisitos Previos
 
-The implementation of the project required the following technical and software components: 
+La implementación del proyecto requirió los siguientes componentes técnicos y de software:
 
-MATLAB R2023a or higher, including the Image Processing Toolbox for contour extraction. 
+MATLAB R2023a o superior.
 
-Robotics Toolbox for MATLAB (Peter Corke), used for modeling and controlling the planar robotic arm. 
+El add On, Image Processing Toolbox para la extracción de contornos. 
 
-PC with minimum specifications: Intel i5 processor, 8 GB RAM, and Windows 10 or equivalent operating system. 
+El add On, Robotics Toolbox for MATLAB (Peter Corke), utilizada para modelar y controlar el brazo robótico planar.
 
-Graphics rendering capability to support animation and simulation of the robot’s motion. 
+Una laptop o PC con las siguientes especificaciones: Procesador Intel i5, 8 GB de RAM, 512GB de almacenamiento y sistema operativo Windows 10, equivalente o superior 
 
-Basic familiarity with inverse kinematics and robotic arm modeling, as well as prior knowledge of MATLAB scripting. 
+Capacidad de renderizado gráfico para soportar la animación y simulación del movimiento del robot.
+
+Conocimientos básicos de cinemática inversa y modelado de brazos robóticos, así como familiaridad previa de programación en MATLAB.
 
 ## 📖 Introducción
 
-This project focuses on the simulation of a planar 3-degree-of-freedom (3-DOF) robotic arm designed to replicate the contours of an input image through automated drawing. The system employs image processing techniques to extract the external boundaries from a binary version of the input image. These contours are decomposed into sets of ordered coordinates, referred to as waypoints, which represent the trajectory that the robot must follow. To facilitate the execution of the drawing, waypoints are grouped based on their spatial continuity and proximity, allowing the robot to follow coherent paths with minimal unnecessary repositioning. Each group of waypoints corresponds to a distinct stroke or contour fragment, thus reducing the number of abrupt movements and enhancing the smoothness of the drawing. The inverse kinematics for each waypoint are computed using the Robotics Toolbox for MATLAB, enabling the real-time simulation of the robot’s motion. This project demonstrates the integration of image analysis, kinematic modeling, and trajectory planning within a simulated robotic environment, and lays the groundwork for future implementation on physical robotic platforms. 
+Este proyecto se centra en la simulación de un brazo robótico planar de 3 grados de libertad (3-DOF) diseñado para replicar los contornos de una imagen de entrada mediante dibujo automatizado. El sistema emplea técnicas de procesamiento de imágenes para extraer los bordes externos de una versión binaria de la imagen. Estos contornos se descomponen en conjuntos de coordenadas ordenadas llamadas waypoints, que representan la trayectoria que debe seguir el robot.
+Para facilitar la ejecución del dibujo, los waypoints se agrupan según su continuidad espacial y proximidad, lo que permite al robot seguir trayectorias coherentes con reposicionamientos mínimos. Cada grupo de waypoints corresponde a un trazo o fragmento de contorno distinto, reduciendo movimientos abruptos y mejorando la suavidad del dibujo.
+La cinemática inversa para cada punto se calcula usando el Robotics Toolbox para MATLAB, lo que permite una simulación en tiempo real del movimiento del robot. Este proyecto demuestra la integración del análisis de imágenes, modelado cinemático y planificación de trayectorias en un entorno robótico simulado, sentando las bases para una futura implementación en plataformas robóticas físicas.
+
 
 ## 🔧 Entorno de Simulación
 
-The entire application was developed and executed within the MATLAB R2024a environment, using its App Designer for graphical interface construction. All simulations and robotic modeling tasks rely on the academic installation of: 
-
-MATLAB R2024a 
-
-Image Processing Toolbox 
-
-Robotics Toolbox for MATLAB (version 10.4) 
-
-This simulation environment allows for seamless integration of image analysis, numerical computation, and robotic visualization, ensuring compatibility and ease of use for educational purposes. The system was tested exclusively on Windows 10, though MATLAB ensures cross-platform support on Linux and macOS under equivalent configurations. 
+La aplicación fue completamente desarrollada y ejecutada en el entorno MATLAB R2024a, utilizando el apartado de App Designer para la construcción de la interfaz gráfica. Todas las simulaciones y tareas de modelado robótico se basan en la instalación académica de:
+•	MATLAB R2024a
+•	Image Processing Toolbox
+•	Robotics Toolbox para MATLAB (versión 10.4)
+Este entorno de simulación permite una integración fluida del análisis de imágenes, cálculos numéricos y simulación robótica, asegurando compatibilidad y facilidad de uso con fines educativos. El sistema fue probado exclusivamente en Windows 10, aunque MATLAB garantiza compatibilidad multiplataforma en Linux y macOS con configuraciones equivalentes.
 
 ## 💾 Instalación de Software
 
-Pasos detallados para instalar y configurar el entorno de simulación:
+Para la instalación de el software de MATLAB se deben hacer una serie de pasos:
+1.	Utilizando el buscador de Google Chrome o Microsoft Edge, colocar en la barra buscadora Matlab, una vez obtenido el resultado entrar a la página oficial de MathWorks.
 
-- Instalación de simulador
+2.	Dar clic en el botón Get Matlab, una vez dado clic se abrirá una ventana nueva.
 
-- Instalación de ROS (si se usa)
+3.	En la ventana nueva crear una nueva cuenta o en caso de ya tener una vigente iniciar sesión.
 
-- Dependencias y librerías necesarias
+4.	En el caso de crear una nueva cuenta, introducir un correo electrónico de empresa o universidad que cuente con la licencia de Matlab e introducir una contraseña de 8 caracteres.
 
----
+5.	Una vez creada la cuenta se deberá introducir un código que llegará al correo proporcionado. Una vez introducido el código se activará la cuenta de Matlab y se deberá introducir más información como nombre, universidad o empresa, país, etc.
+
+6.	Al concretarse la creación y activación de la cuenta, la pagina trasladara al usuario a Matlab Online donde se debe dar clic a la opción de instalar Matlab en la computadora.
+
+7.	Dando click en instalar se abrirá una nueva ventana donde se debe escoger la versión de Matlab que se va a descargar (R2024a o superior).
+
+8.	Una vez descargada la versión seleccionada, ir a la carpeta de descargas en la aplicación de archivos, dar clic derecho y ejecutar.
+
+9.	 Después de descargar, se abrirá una ventana emergente donde se debe colocar nuevamente el correo y la contraseña de la cuenta previamente creada, iniciar sesión y aceptar el contrato de uso.
+
+10.	Al iniciarse sesión por primera vez, se debe seleccionar una carpeta destino para los archivos de Matlab y posteriormente escoger el número de productos que ofrece Matlab, en este apartado escoger los productos necesarios para que la aplicación funcione. En este caso seleccionar Image Processing Toolbox y Robotics Toolbox para MATLAB (versión 10.4) junto con App Matlab.
+
+11.	Dar clic en el botón siguiente e instalar.
+
+12.	Finalmente, una vez realizada la instalación iniciar sesión por última vez con el correo y contraseña seleccionadas al inicio e utilizar Matlab.
+
+Nota: En caso de no haber instalado los productos necesarios para utilizar la Aplicación ir al apartado de Home en la aplicación y seleccionar Add-Ons, y buscar las los productos necesarios para observar el funcionamiento de la aplicación.
+
 
 ## 🛠️ Configuración del Proyecto
 
@@ -63,133 +82,121 @@ roslaunch proyecto_simulacion main.launch
 
 ## 💻 Programación
 
-The developed application, titled Planar Drawing Robot, is an interactive graphical interface built in MATLAB App Designer. It enables users to simulate the drawing behavior of a 3-degree-of-freedom (3-DOF) planar robot by processing an input image and generating corresponding joint trajectories. 
+La aplicación desarrollada, titulada Planar Drawing Robot, es una interfaz gráfica interactiva construida en el apartado de App Designer en MATLAB. Permite a los usuarios simular el movimiento de un robot planar de 3-DOF procesando una imagen de entrada y generando las trayectorias articulares correspondientes, creando un dibujo de la imagen procesada.
+La interfaz de usuario está diseñada para ser clara e intuitiva, con un panel central de imagen, un conjunto de botones de control y un deslizador para ajustar el procesamiento de la imagen. El flujo de trabajo se divide en cinco etapas principales:
 
-The user interface is designed for clarity and intuitive use, consisting of a central image panel, a set of control buttons, and a slider for image processing. The complete workflow is divided into five main stages: 
+1. Adquisición de imagen
 
-1. Image Acquisition 
+El usuario puede cargar una imagen desde su equipo (siempre que sea en formato JPG) o capturar una nueva con la cámara integrada. Este proceso se gestiona mediante cuatro botones:
 
-Users may choose to either load an existing image from their local computer or capture a new image using the device's integrated camera. This process is facilitated through four buttons: 
+•	Cargar Imagen: Abre el explorador de archivos para seleccionar una imagen en formato .jpg.
 
-Load Image: Opens a file browser for selecting an image file. The system supports .jpg format exclusively due to internal limitations in MATLAB’s imread() function. 
+•	Encender Cámara: Activa la webcam y muestra el video en tiempo real.
 
-Turn On Camera: Activates the webcam and displays a live video feed in the Selected/Real-Time Image panel. 
+•	Tomar Foto: Captura el cuadro actual de la cámara y lo muestra en la interfaz.
 
-Take Picture: Captures the current frame from the camera feed and displays it within the interface. 
+•	Apagar Cámara: Cierra el feed de la cámara para liberar recursos.
+Un campo de texto llamado Ruta de Imagen se llena automáticamente al cargar una imagen, permitiendo verificar el archivo seleccionado.
 
-Turn Off Camera: Closes the camera feed to prevent resource conflicts and ensure stable performance. 
+2. Procesamiento de imagen
 
-A text field labeled Image Path is automatically populated when loading an image from disk, helping the user verify the selected file. 
+Una vez cargada o capturada la imagen, se procesa para extraer los contornos relevantes que el robot dibujará:
 
-2. Image Processing 
+•	Nivel de Procesamiento (Deslizador): Controla la sensibilidad del algoritmo de detección de bordes. Valores bajos simplifican los contornos; valores altos retienen más detalles.
 
-Once the image is loaded or captured, it must be processed to extract relevant contours that the robot will draw. This is done via: 
+•	Procesar (Botón): Aplica el procesamiento y actualiza el panel de imagen procesada.
 
-Process Level (Slider): Determines the threshold or sensitivity applied during edge detection. Lower values yield simplified contours with fewer points, while higher values retain more detail but increase trajectory complexity. 
+Distintos niveles del deslizador generan mapas de contornos significativamente diferentes, lo que permite ajustar según la complejidad del dibujo y el tiempo de ejecución.
 
-Process (Button): Applies the selected processing level, updating the Processed Image panel to visually reflect the contour detection result. 
+3. Generación de trayectoria
 
-Different slider values generate significantly different contour maps, allowing for testing and optimization based on drawing complexity and execution time. (See Figures: “Processed Image – Low”, “Medium”, and “High”). 
+Los contornos detectados se convierten en coordenadas ordenadas (waypoints), agrupadas según su continuidad espacial. Esto minimiza el movimiento errático y permite trazos más naturales.
+Las coordenadas se escalan y transforman al espacio de trabajo del robot, siendo la base para el cálculo de la cinemática inversa.
 
-3. Trajectory Generation 
+4. Ejecución de simulación
 
-The contours detected are decomposed into a series of ordered pixel coordinates known as waypoints. These waypoints are spatially grouped based on continuity and proximity to form coherent sub-trajectories. This reduces erratic motion and allows for smooth robotic movements. Each group is treated as a separate path segment, emulating a natural "stroke" in the drawing. 
+Cuando la imagen procesada está lista, el usuario inicia el dibujo presionando:
 
-The coordinates are scaled and translated into the robot’s operational workspace, forming the basis for inverse kinematics computation. 
+•	Robot Planar (Botón): Abre una ventana de simulación donde el robot sigue la trayectoria calculada, animado en tiempo real con Robotics Toolbox.
 
-4. Simulation Execution 
+Se añaden retardos intencionales entre puntos para mejorar la estabilidad visual y evitar errores de renderizado por transiciones rápidas o datos inválidos (por ejemplo, valores NaN).
 
-Once the user is satisfied with the processed image, they initiate the drawing by pressing: 
+5. Visualización de salida
 
-Robot Planar (Button): This command triggers a simulation window where the planar robot follows the computed trajectory. The robot is animated in real-time using the Peter Corke Robotics Toolbox. 
+El brazo robótico reproduce visualmente la secuencia de dibujo, siguiendo cada trazo en orden. La simulación final refleja el contorno de la imagen de entrada, demostrando la integración efectiva de procesamiento de imágenes y control de movimiento robótico.
 
-To enhance stability and readability of the simulation, delays are intentionally added between successive waypoints. This prevents jittering or undefined motion when encountering missing or extreme values (e.g., NaN entries in the data). 
+Estructura del programa y explicación del código
+La aplicación está implementada de forma orientada a objetos usando App Designer de MATLAB, organizando la lógica en una clase que gestiona todos los componentes (botones, sliders, paneles de imagen) y sus callbacks.
 
-5. Output Visualization 
+1.	Inicialización
 
-The drawing sequence is visually replicated by the robot arm, showing how each path segment is traced in order. The final simulation visually matches the contour of the input image, demonstrating successful integration of image processing and robotic motion control. 
+Se ejecuta automáticamente al lanzar la app, configurando los componentes gráficos y las variables internas por defecto.
 
-Program Structure and Code Explanation 
+2.	Carga de la imagen
 
-The application is implemented as an object-oriented program using MATLAB’s App Designer framework, which organizes the interface and logic into a class-based architecture. All components, such as buttons, sliders, image panels, and their associated behaviors, are encapsulated within a single app class that manages their properties and callbacks. 
+Se activa un diálogo para seleccionar un archivo .jpg o usar la cámara para capturar una imagen. Esta se guarda en memoria para su procesamiento.
 
-1. Initialization and Component Setup 
+3.	Procesamiento y extracción de waypoints
 
-Upon launching the app, the constructor method is automatically called to initialize the user interface. During this phase, all graphical components are rendered and positioned, including the layout for image panels, control buttons, text fields, and the process level slider. At this stage, default values for internal variables are also defined (e.g., empty image paths, blank waypoints, flags for camera state). 
+La imagen se convierte a escala de grises, se detectan bordes con un algoritmo (Canny o Sobel) y se extraen los contornos como coordenadas.
 
-2. Image Loading and Display 
+4.	 Cinemática inversa y planificación
 
-When the user selects the Load Image button, a file dialog is triggered to allow the selection of a .jpg file from the local system. The selected image is loaded into memory using MATLAB’s standard image reading functions and is then displayed on the left side of the interface. If the user instead uses the camera, the app activates the webcam using MATLAB’s webcam support. A live preview feed is embedded in the UI, and a captured frame can be frozen and stored for processing. In both cases, the image is internally stored in a variable for further use. 
+Se define un modelo cinemático basado en parámetros DH. Para cada waypoint, se calculan los ángulos articulares. Se filtran puntos no alcanzables o inconsistentes.
 
-3. Image Processing and Waypoint Extraction 
+5.	 Simulación y animación
 
-The core of the system lies in its image processing pipeline. When the Process button is pressed, the image—either from disk or camera—is first converted to grayscale and filtered to enhance edges. Edge detection is then performed using a fixed algorithm (e.g., Canny or Sobel), with its sensitivity adjusted through the slider labeled Process Level. The resulting binary image is analyzed to extract contours, which are then sampled into discrete pixel coordinates. 
+Se genera una ventana con el robot animado siguiendo la trayectoria con retrasos entre cuadros para mejorar la visualización.
 
-These coordinates, called waypoints, are stored in the workspace and used for trajectory generation. The code also includes logic to group waypoints into continuous paths, reducing disjointed movement and improving the realism of the drawing. 
+6.	Gestión de recursos
 
-4. Inverse Kinematics and Trajectory Planning 
-
-Once the waypoints are defined, the inverse kinematics solver—provided by the Robotics Toolbox—is used to compute the joint angles required to reach each point. The robot model is configured based on predefined Denavit–Hartenberg (DH) parameters, corresponding to the structure of a planar 3R arm. For each waypoint, a set of joint angles is calculated and stored in sequence, forming the robot’s full drawing trajectory. 
-
-Special care is taken to handle exceptions such as unreachable points or undefined solutions (e.g., NaN values), which are filtered or smoothed to maintain stable motion. 
-
-5. Robot Simulation and Animation 
-
-The final sequence is executed when the Robot Planar button is pressed. A new figure window is generated showing the simulated robot arm. Using animation loops, the robot iteratively updates its joint configuration according to the computed trajectory. A deliberate delay is introduced between frames to allow the user to visually follow the motion and to avoid instability in the rendering caused by rapid transitions. 
-
-The animation is synchronized with the stored waypoints, ensuring that the robot's tool tip follows the intended path in a smooth and coherent manner. 
-
-6. Resource Management and Cleanup 
-
-The application also includes logic for managing system resources, particularly when working with the camera. Functions are provided to correctly release hardware handles, stop live previews, and close figures when not needed, avoiding common runtime issues in MATLAB. 
-
+Se libera la cámara y se cierran ventanas cuando no se usan para evitar errores comunes de ejecución.
+ 
 ## ✅ Conclusión
 
-The implementation of the Planar Drawing Robot successfully demonstrates the integration of image processing and robotic motion control within a single interactive platform. By converting visual input into waypoints and executing corresponding movements through inverse kinematics, the system achieves a functional simulation of automated drawing using a 3-DOF planar robot. The user interface proved intuitive and effective, allowing real-time interaction with both image acquisition and robot behavior. 
-
-However, there are several potential improvements that could enhance both functionality and realism. Future iterations could include: 
-
-Support for additional image formats such as .png or .bmp, increasing flexibility in input options. 
-
-Contour simplification algorithms to dynamically reduce the number of waypoints while preserving shape fidelity, improving execution speed. 
-
-Stroke-order optimization to minimize total travel distance, simulating a more natural drawing sequence. 
-
-Integration with physical hardware, such as stepper motors or servo-driven robotic arms, to transition from simulation to real-world execution. 
-
-Camera calibration and perspective correction to improve the accuracy of real-time image capture and preprocessing. 
-
-These improvements would extend the educational and experimental value of the system, allowing for more advanced applications in robotics, automation, and computer vision. 
+La implementación del Planar Drawing Robot demuestra con éxito la integración del procesamiento de imágenes y el control de movimiento robótico en una única plataforma interactiva. Al convertir una imagen en una secuencia de movimientos mediante cinemática inversa, se logra una simulación funcional de dibujo automatizado. Sin embargo, a lo largo de la creación de la aplicación se observaron algunos detalles como la limitación de resolución de pantalla, ya que para monitores de 1920 x 1080 el diseño implementado se ve afectado y se observan palabras o colores encimados. De igual manera, el software de MATLAB genera algunas limitaciones en cuanto los formatos de imagen que se pueden procesar, ya que únicamente las imágenes JPG pueden ser procesadas, de igual manera la gama de colores que se puede procesar es RGB por lo que colores chillantes o neón no se pueden procesar. Aun que el nivel de detalle que se observa en las imágenes y la fluides de los movimientos del robot demuestran que la aplicación funciona de manera óptima para los objetivos fijados.
 
 ## 🔜 Mejoras futuras
 
-- Enlistar las mejoras a realizar
+•	Soporte para formatos de imagen adicionales como .png o .bmp.
+
+•	Algoritmos de simplificación de contornos para reducir puntos sin perder fidelidad.
+
+•	Optimización del orden de trazos para minimizar desplazamientos innecesarios.
+
+•	Integración con hardware físico como motores paso a paso o servos.
+
+•	Calibración de cámara y corrección de perspectiva para mejorar la captura en tiempo real.
+
+Estas mejoras ampliarían el valor educativo y experimental del sistema para aplicaciones más avanzadas en robótica, automatización y visión por computadora.
 
 ## ⚠️ Advertencia
 
-This application was developed strictly for academic and educational purposes within a controlled environment. It is intended as a simulation tool and should not be deployed in industrial or safety-critical contexts without proper validation, testing, and supervision. 
+Esta aplicación fue desarrollada exclusivamente con fines académicos y educativos en un entorno controlado. No debe usarse en contextos industriales o críticos sin validación y supervisión adecuadas.
 
-The authors assume no responsibility for any malfunction, hardware damage, or data loss that may occur as a result of improper use, external modification, or integration with unsupported devices. Users are advised to operate the application exclusively on supported MATLAB versions and to verify all image inputs and hardware compatibility beforehand. 
-
-Any replication, distribution, or extension of this software must be done acknowledging its prototype status and under the same academic context for which it was created. 
-
----
+Los autores no se responsabilizan por daños, malfuncionamientos o pérdida de datos derivados del uso incorrecto, modificaciones externas o integración con dispositivos no compatibles. Se recomienda utilizar solo versiones compatibles de MATLAB y verificar la entrada de imágenes y el hardware antes de su ejecución.Cualquier reproducción o distribución del software debe reconocer su carácter de prototipo y mantenerse en el contexto académico original.
 
 ## 📚 Recursos Adicionales
 
----
+Pagina oficial de Matlab: https://www.mathworks.com/products/matlab.html
+
+Pagina oficial de Peter Corke: https://petercorke.com
+
+Video del funcionamiento de la aplicación: https://youtu.be/bnFwH0hqel0
 
 ## 👥 Autores del proyecto
+Equipo 6 de Robótica Indutrial:
 
-Autores originales del proyecto
+Juan Pablo Alfaro Gaona id:173549
 
----
+Santiago Suárez Martínez id:175015
+
+Alan Baladier Nicolás Beltrán Durán id:172776
 
 ## 📬 Contacto
 
 ¿Tienes dudas o sugerencias?
 
-- 📧 Correo electrónico: ejemplo@udlap.mx
+Asesor encargado de la página: César Martínez Torres
 
----
-
+- 📧 Correo electrónico:cesar.martinez@udlap.mx
