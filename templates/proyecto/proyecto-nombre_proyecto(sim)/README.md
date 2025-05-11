@@ -158,17 +158,17 @@ La implementación del Planar Drawing Robot demuestra con éxito la integración
 
 ## 🔜 Mejoras futuras
 
-•	Soporte para formatos de imagen adicionales como .png o .bmp.
+A partir de los resultados obtenidos, se identificaron diversas oportunidades para ampliar, optimizar o adaptar el proyecto a otros entornos y aplicaciones más robustas. Entre las mejoras más relevantes se encuentran:
 
-•	Algoritmos de simplificación de contornos para reducir puntos sin perder fidelidad.
+•	Compatibilidad con formatos de imagen adicionales, como `.png` y `.bmp`, para brindar mayor flexibilidad al usuario.
 
-•	Optimización del orden de trazos para minimizar desplazamientos innecesarios.
+•	Simplificación inteligente de trayectorias, reduciendo la cantidad de puntos (waypoints) sin comprometer la fidelidad de la figura.
 
-•	Integración con hardware físico como motores paso a paso o servos.
+•	Optimización del orden de dibujo**, minimizando movimientos innecesarios y tiempos de ejecución.
+•	Implementación sobre hardware físico, permitiendo que el robot dibuje realmente sobre una superficie mediante motores y controladores.
+•	Calibración de cámara y corrección de perspectiva, para mejorar la precisión cuando se captura una imagen desde un ángulo distinto al frontal.
 
-•	Calibración de cámara y corrección de perspectiva para mejorar la captura en tiempo real.
-
-Estas mejoras ampliarían el valor educativo y experimental del sistema para aplicaciones más avanzadas en robótica, automatización y visión por computadora.
+Como parte de una extensión voluntaria del proyecto, se desarrolló también una versión alternativa en Python, basada en el mismo principio de dibujo mediante un robot planar. Aunque no cuenta con una interfaz gráfica, este programa representa una solución más versátil y ligera, pensada para futuras aplicaciones sobre plataformas embebidas o sistemas operativos de código abierto. El archivo correspondiente fue entregado directamente al profesor encargado, como material de apoyo para proyectos posteriores.
 
 ## ⚠️ Advertencia
 
@@ -182,7 +182,9 @@ Pagina oficial de Matlab: https://www.mathworks.com/products/matlab.html
 
 Pagina oficial de Peter Corke: https://petercorke.com
 
-Video del funcionamiento de la aplicación: https://youtu.be/bnFwH0hqel0
+Video del funcionamiento de la aplicación subiendo imagenes desde la computadora: https://youtu.be/bnFwH0hqel0
+
+Video del funcionamiento utilizando una cámara web: https://youtu.be/_cR2oOMbyiU
 
 ## 👥 Autores del proyecto
 Equipo 6 de Robótica Indutrial:
