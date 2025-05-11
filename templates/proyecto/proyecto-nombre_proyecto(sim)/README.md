@@ -70,15 +70,23 @@ Nota: En caso de no haber instalado los productos necesarios para utilizar la Ap
 
 ## 🛠️ Configuración del Proyecto
 
-Instrucciones para clonar el repositorio, compilar, lanzar el mundo simulado y ejecutar los nodos o scripts:
+Para ejecutar correctamente la aplicación, el usuario debe contar con una instalación funcional de MATLAB R2024a (o una versión compatible), junto con las herramientas necesarias. A continuación, se describen los pasos que debe seguir un usuario nuevo para poner en marcha la aplicación: 
 
-```bash
-git clone https://github.com/usuario/proyecto-simulacion.git
-cd proyecto-simulacion
-catkin_make
-source devel/setup.bash
-roslaunch proyecto_simulacion main.launch
-```
+Instalar las herramientas necesarias Verifique que MATLAB tenga instalados y activados los siguientes complementos: 
+
+Image Processing Toolbox 
+
+Robotics Toolbox for MATLAB de Peter Corke (versión 10.4) 
+
+Descargar los archivos del proyecto Asegúrese de obtener todos los archivos del proyecto, incluyendo el archivo principal .mlapp y cualquier función auxiliar o imagen necesaria. Se recomienda colocarlos en una sola carpeta para facilitar su organización. 
+
+Abrir la aplicación Inicie MATLAB, navegue a la carpeta del proyecto desde el panel de "Current Folder" y abra el archivo .mlapp haciendo doble clic. Alternativamente, también puede ejecutar la aplicación desde la ventana de comandos. 
+
+Conceder acceso a la cámara (si se desea utilizar la captura en tiempo real) En caso de utilizar la opción de cámara en vivo, asegúrese de que MATLAB tenga permisos para acceder al dispositivo de video. Es recomendable realizar pruebas previas con la función webcam para validar su funcionamiento. 
+
+Verificar compatibilidad de imágenes Actualmente, MATLAB solo admite imágenes en formato .jpg. Se recomienda convertir otros formatos antes de cargarlos. 
+
+Una vez realizada esta configuración, el usuario podrá utilizar la aplicación de manera completa y sin complicaciones. 
 
 ## 💻 Programación
 
