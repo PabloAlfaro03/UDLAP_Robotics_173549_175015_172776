@@ -79,9 +79,11 @@ Robotics Toolbox for MATLAB de Peter Corke (versión 10.4)
 
 Descargar los archivos del proyecto que se encuentran en la carpeta src.Asegúrese de obtener todos los archivos del proyecto, incluyendo el archivo principal .mlapp y cualquier función auxiliar o imagen necesaria. Se recomienda colocarlos en una sola carpeta para facilitar su organización. 
 
-Abrir la aplicación Inicie MATLAB, navegue a la carpeta del proyecto desde el panel de "Current Folder" y abra el archivo .mlapp haciendo doble clic. Alternativamente, también puede ejecutar la aplicación desde la ventana de comandos. 
+Abrir la aplicación e Inicie MATLAB. Después, navegue a la carpeta del proyecto desde el panel de "Current Folder" y abra el archivo .mlapp haciendo doble clic. Alternativamente, también puede ejecutar la aplicación desde la ventana de comandos. 
 
 ![interfaz](https://github.com/PabloAlfaro03/UDLAP_Robotics_173549_175015_172776/blob/master/templates/proyecto/proyecto-nombre_proyecto(sim)/media/images/Interfaz2.png)
+
+<p align="center">interfaz de la aplicación</p>
 
 Conceder acceso a la cámara (si se desea utilizar la captura en tiempo real) En caso de utilizar la opción de cámara en vivo, asegúrese de que MATLAB tenga permisos para acceder al dispositivo de video. Es recomendable realizar pruebas previas con la función webcam para validar su funcionamiento. 
 
